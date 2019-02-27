@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -9,8 +9,8 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Findit</RootNamespace>
-    <AssemblyName>FindIt</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AssemblyName>Findit</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ApplicationIcon>Binoculars.ico</ApplicationIcon>
     <NoWin32Manifest>true</NoWin32Manifest>
@@ -18,13 +18,7 @@
     </FileUpgradeFlags>
     <OldToolsVersion>3.5</OldToolsVersion>
     <UpgradeBackupLocation />
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <SccProjectName>SAK</SccProjectName>
-    <SccLocalPath>SAK</SccLocalPath>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -37,8 +31,13 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -48,7 +47,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -58,27 +56,10 @@
     </DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup>
-    <SignManifests>false</SignManifests>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ManifestCertificateThumbprint>C9B5E4A31EF3BF21A99F6851E0E982F28A457AF9</ManifestCertificateThumbprint>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ManifestKeyFile>FindIt_TemporaryKey.pfx</ManifestKeyFile>
-  </PropertyGroup>
-  <PropertyGroup>
-    <SignAssembly>false</SignAssembly>
-  </PropertyGroup>
-  <PropertyGroup>
-    <AssemblyOriginatorKeyFile>
-    </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EPocalipse.IFilter">
-      <HintPath>.\EPocalipse.IFilter.dll</HintPath>
+      <HintPath>external dlls\EPocalipse.IFilter.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
@@ -97,6 +78,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileMatchLines.cs" />
+    <Compile Include="FlashWindow.cs" />
     <Compile Include="forms\AboutBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,15 +92,7 @@
     <Compile Include="forms\Config.Designer.cs">
       <DependentUpon>Config.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\Diagnostics.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\Diagnostics.Designer.cs">
-      <DependentUpon>Diagnostics.cs</DependentUpon>
-    </Compile>
     <Compile Include="FileFinder.cs" />
-    <Compile Include="FileMatchLines.cs" />
-    <Compile Include="FlashWindow.cs" />
     <Compile Include="Globals.cs" />
     <Compile Include="Grepper.cs" />
     <Compile Include="GUIPreferences.cs" />
@@ -144,9 +119,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\Config.resx">
       <DependentUpon>Config.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\Diagnostics.resx">
-      <DependentUpon>Diagnostics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -197,20 +169,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Binoculars.ico" />
-    <Content Include="external dlls\EPocalipse.IFilter.dll" />
-    <Content Include="img\big_clipboard.png" />
-    <Content Include="img\Binoculars.ico" />
     <Content Include="img\buy_now.png" />
-    <Content Include="img\Cancel.png" />
-    <Content Include="img\green_check.png" />
     <Content Include="img\key.png" />
-    <Content Include="img\Left_black_delete_arrow.png" />
     <Content Include="img\little_cancel.png" />
-    <Content Include="img\Preview.png" />
-    <Content Include="img\select_row.png" />
-    <Content Include="img\tiny_edit.png" />
-    <Content Include="img\tiny_folder.png" />
-    <Content Include="img\tiny_spiral_notebook.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">
@@ -234,13 +195,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="sample search target\" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>::"$(ProjectDir)\postbuild.bat"</PostBuildEvent>
-  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

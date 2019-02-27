@@ -59,7 +59,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EPocalipse.IFilter">
-      <HintPath>..\..\..\..\downloads\IFilter\Source\Tester\bin\Release\EPocalipse.IFilter.dll</HintPath>
+      <HintPath>external dlls\EPocalipse.IFilter.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
@@ -78,39 +78,49 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutBox.cs">
+    <Compile Include="FileMatchLines.cs" />
+    <Compile Include="FlashWindow.cs" />
+    <Compile Include="forms\AboutBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AboutBox.Designer.cs">
+    <Compile Include="forms\AboutBox.Designer.cs">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Config.cs">
+    <Compile Include="forms\Config.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Config.Designer.cs">
+    <Compile Include="forms\Config.Designer.cs">
       <DependentUpon>Config.cs</DependentUpon>
     </Compile>
     <Compile Include="FileFinder.cs" />
+    <Compile Include="Globals.cs" />
     <Compile Include="Grepper.cs" />
     <Compile Include="GUIPreferences.cs" />
+    <Compile Include="PerfStat.cs" />
+    <Compile Include="ProcessorFileQueue.cs" />
+    <Compile Include="QueueBuilder.cs" />
+    <Compile Include="QueuedFile.cs" />
     <Compile Include="SearchParameters.cs" />
-    <Compile Include="Main.cs">
+    <Compile Include="forms\Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
+    <Compile Include="forms\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchResult.cs" />
     <Compile Include="SerializablePreferenceSaver.cs" />
+    <Compile Include="StatusBoard.cs" />
+    <Compile Include="UserParameters.cs" />
     <Compile Include="Util.cs" />
-    <EmbeddedResource Include="AboutBox.resx">
+    <EmbeddedResource Include="forms\AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Config.resx">
+    <EmbeddedResource Include="forms\Config.resx">
       <DependentUpon>Config.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
+    <EmbeddedResource Include="forms\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -118,10 +128,10 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="PurchaseOptions.resx">
+    <EmbeddedResource Include="forms\PurchaseOptions.resx">
       <DependentUpon>PurchaseOptions.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegistrationForm.resx">
+    <EmbeddedResource Include="forms\RegistrationForm.resx">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
@@ -139,16 +149,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="PurchaseOptions.cs">
+    <Compile Include="forms\PurchaseOptions.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PurchaseOptions.Designer.cs">
+    <Compile Include="forms\PurchaseOptions.Designer.cs">
       <DependentUpon>PurchaseOptions.cs</DependentUpon>
     </Compile>
-    <Compile Include="RegistrationForm.cs">
+    <Compile Include="forms\RegistrationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegistrationForm.Designer.cs">
+    <Compile Include="forms\RegistrationForm.Designer.cs">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Registration.cs" />
