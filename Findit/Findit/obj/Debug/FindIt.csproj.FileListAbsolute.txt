@@ -45,3 +45,17 @@ C:\dev\src\FindIt\Findit\Findit\obj\Debug\FindIt.csproj.CoreCompileInputs.cache
 C:\dev\src\FindIt\Findit\Findit\obj\Debug\FindIt.csproj.CopyComplete
 C:\dev\src\FindIt\Findit\Findit\obj\Debug\Findit.exe
 C:\dev\src\FindIt\Findit\Findit\obj\Debug\Findit.pdb
+C:\dev\src\github\FindIt\Findit\Findit\bin\Debug\Findit.exe.config
+C:\dev\src\github\FindIt\Findit\Findit\bin\Debug\Findit.exe
+C:\dev\src\github\FindIt\Findit\Findit\bin\Debug\Findit.pdb
+C:\dev\src\github\FindIt\Findit\Findit\bin\Debug\EPocalipse.IFilter.dll
+C:\dev\src\github\FindIt\Findit\Findit\obj\Debug\Findit.AboutBox.resources
+C:\dev\src\github\FindIt\Findit\Findit\obj\Debug\Findit.Config.resources
+C:\dev\src\github\FindIt\Findit\Findit\obj\Debug\Findit.frmMain.resources
+C:\dev\src\github\FindIt\Findit\Findit\obj\Debug\Findit.Properties.Resources.resources
+C:\dev\src\github\FindIt\Findit\Findit\obj\Debug\Findit.PurchaseOptions.resources
+C:\dev\src\github\FindIt\Findit\Findit\obj\Debug\Findit.RegistrationForm.resources
+C:\dev\src\github\FindIt\Findit\Findit\obj\Debug\Findit.csproj.GenerateResource.cache
+C:\dev\src\github\FindIt\Findit\Findit\obj\Debug\Findit.csproj.CopyComplete
+C:\dev\src\github\FindIt\Findit\Findit\obj\Debug\Findit.exe
+C:\dev\src\github\FindIt\Findit\Findit\obj\Debug\Findit.pdb

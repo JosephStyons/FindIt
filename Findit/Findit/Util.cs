@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Diagnostics;
@@ -97,7 +94,7 @@ namespace Findit
                         rtb.SelectionStart = i;
                         rtb.SelectionLength = WordToHighlight.Length;
                         rtb.SelectionColor = Color.Red;
-                        i = i + WordToHighlight.Length;
+                        i += WordToHighlight.Length;
                     }
                 }
             }
@@ -112,13 +109,13 @@ namespace Findit
                     //start using the custom exe they asked for
                     Process ntpdplpl = new Process();
                     ntpdplpl.StartInfo.FileName = customexe;
-                    ntpdplpl.StartInfo.Arguments = fname;
+                    ntpdplpl.StartInfo.Arguments = "\"" + fname + "\"";
                     ntpdplpl.Start();
                 }
                 else
                 {
                     //let the system decide what is the best editor
-                    System.Diagnostics.Process.Start(fname);
+                    Process.Start(fname);
                 }
             }
         }

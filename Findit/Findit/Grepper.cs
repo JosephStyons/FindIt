@@ -360,50 +360,50 @@ namespace Findit
     //    return false;
     //}
 
-    //private Int64 IsTextInOfficeDocument(string filename, string searchtext, Boolean casesensitive, Boolean includeOffice)
-    //{
-    //    //look for a match in a file, quit as soon as you find it
-    //    try
-    //    {
-    //        Int64 currlinenum = 0;
-    //        StoreNotification("Searching file '" + filename + "'");
-    //        System.IO.TextReader reader = new EPocalipse.IFilter.FilterReader(filename);
-    //        string[] completeText = reader.ReadToEnd().Split('\n');
-    //        try
-    //        {
-    //            if (0 < completeText.Length)
-    //            {
-    //                for (int i = 0; i < completeText.Length; ++i)
-    //                {
-    //                    string currentLine = completeText[i];
-    //                    currlinenum++;
-    //                    if (-1 < currentLine.IndexOf(searchtext, (casesensitive ? StringComparison.CurrentCulture : StringComparison.CurrentCultureIgnoreCase)))
-    //                    {
-    //                        return currlinenum;
-    //                    }
-    //                }
-    //            }
-    //            return -1;
-    //        }
-    //        finally
-    //        {
-    //            reader.Close();
-    //            reader.Dispose();
-    //        }
-    //    }
-    //    catch (System.IO.IOException)
-    //    {
-    //        //"File in use by another process" exception
-    //        StoreException("'" + filename + "' is being used by another process.");
-    //        return -1;
-    //    }
-    //    catch (Exception e)
-    //    {
-    //        //all other exceptions
-    //        StoreException("Exception in file '" + filename + "': '" + e.Message + "'");
-    //        return -1;
-    //    }
-    //}
+    private Int64 IsTextInOfficeDocument(string filename, string searchtext, Boolean casesensitive, Boolean includeOffice)
+    {
+        //look for a match in a file, quit as soon as you find it
+        try
+        {
+            Int64 currlinenum = 0;
+            StoreNotification("Searching file '" + filename + "'");
+            System.IO.TextReader reader = new EPocalipse.IFilter.FilterReader(filename);
+            string[] completeText = reader.ReadToEnd().Split('\n');
+            try
+            {
+                if (0 < completeText.Length)
+                {
+                    for (int i = 0; i < completeText.Length; ++i)
+                    {
+                        string currentLine = completeText[i];
+                        currlinenum++;
+                        if (-1 < currentLine.IndexOf(searchtext, (casesensitive ? StringComparison.CurrentCulture : StringComparison.CurrentCultureIgnoreCase)))
+                        {
+                            return currlinenum;
+                        }
+                    }
+                }
+                return -1;
+            }
+            finally
+            {
+                reader.Close();
+                reader.Dispose();
+            }
+        }
+        catch (System.IO.IOException)
+        {
+            //"File in use by another process" exception
+            StoreException("'" + filename + "' is being used by another process.");
+            return -1;
+        }
+        catch (Exception e)
+        {
+            //all other exceptions
+            StoreException("Exception in file '" + filename + "': '" + e.Message + "'");
+            return -1;
+        }
+    }
 
     private long IsTextInFile(string filename, string searchtext, bool casesensitive, bool includeOffice)
     {
@@ -427,7 +427,7 @@ namespace Findit
               {
                 if (includeOffice && IsOfficeDocument(filename))
                 {
-                  return -1;// IsTextInOfficeDocument(filename, searchtext, casesensitive, includeOffice);
+                  return IsTextInOfficeDocument(filename, searchtext, casesensitive, includeOffice);
                 }
                 else
                 {
