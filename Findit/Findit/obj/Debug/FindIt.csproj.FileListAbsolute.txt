@@ -59,3 +59,4 @@ C:\dev\src\github\FindIt\Findit\Findit\obj\Debug\Findit.csproj.GenerateResource.
 C:\dev\src\github\FindIt\Findit\Findit\obj\Debug\Findit.csproj.CopyComplete
 C:\dev\src\github\FindIt\Findit\Findit\obj\Debug\Findit.exe
 C:\dev\src\github\FindIt\Findit\Findit\obj\Debug\Findit.pdb
+C:\dev\src\github\FindIt\Findit\Findit\obj\Debug\FindIt.csprojAssemblyReference.cache
